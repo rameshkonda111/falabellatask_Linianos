@@ -12,43 +12,43 @@ class Linianos{
 	public $multiplesof5;
 	public $multiplesof3and5;
 	public $remainingnums;
-	
+
 	function getResult(){ 
-        for($incNum =1; $incNum <=100;$incNum++)
-        {
-            $this->remainingnums = $incNum; 
-            $this->multiplesof3  = $this->getRemainder($incNum,3);
-            $this->multiplesof5  = $this->getRemainder($incNum,5);
-            $this->multiplesof3and5 = $this->addRemainder($this->multiplesof3,$this->multiplesof5);
-            $this->showResult($this);
-        }
-    }
+		for($incNum =1; $incNum <=100;$incNum++)
+		{
+		    $this->remainingnums = $incNum; 
+		    $this->multiplesof3  = $this->getRemainder($incNum,3);
+		    $this->multiplesof5  = $this->getRemainder($incNum,5);
+		    $this->multiplesof3and5 = $this->addRemainder($this->multiplesof3,$this->multiplesof5);
+		    $this->showResult($this);
+		}
+	    }
 	
 	function getRemainder($number,$devider )
-    {
-        return $number % $devider;
-    }
-    function addRemainder($number3,$number5)
-    {
-        return $number3 +  $number5;
-    }
+	{
+		return $number % $devider;
+	}
+	function addRemainder($number3,$number5)
+	{
+		return $number3 +  $number5;
+	}
 
 	function showResult($result)
-    {
-        switch ($result) {
-            case ($result->multiplesof3and5 == 0 ):
-                echo "Linianos"."</br>";
-                break;
-            case ($result->multiplesof5 == 0):
-                echo "IT"."</br>";
-                break;
-            case ($result->multiplesof3==0):
-                echo "Linio"."</br>";
-                break;
-            default:
-                echo $result->remainingnums."</br>";
-        }
-    }	
+	{
+		switch ($result) {
+			case ($result->multiplesof3and5 == 0 ):
+				echo "Linianos"."</br>";
+				break;
+			case ($result->multiplesof5 == 0):
+				echo "IT"."</br>";
+				break;
+			case ($result->multiplesof3==0):
+				echo "Linio"."</br>";
+				break;
+			default:
+				echo $result->remainingnums."</br>";
+		}
+	}	
 }
 
 $obj = new Linianos();
